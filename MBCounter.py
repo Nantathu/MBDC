@@ -4,6 +4,8 @@ from datetime import datetime
 import pathlib
 import pickle
 
+
+
 def button_click(number):
     current = entry.get()
     entry.delete(0, END)
@@ -20,8 +22,7 @@ def save_data():
 
 def load_data():
     if file.exists ():
-        global var
-        var = pickle.load(open('var_data.pickle', 'rb'))
+        var
 
 def button_clear():
     entry.delete(0, END)
@@ -32,20 +33,24 @@ def button_clear():
 def button_log():
     messagebox.showinfo('Last mental breakdown:', current_date)
 
-#Current date
-current_date = datetime.today().strftime('%Y-%m-%d-%H:%M')
 
-#Main window
+
+#Main window functions and configuration.
 window = Tk()
 window.title("Mental Breakdown Counter")
 window.configure(bg="black")
 window.geometry("254x129")
 window.resizable(False, False)
 
-#Var declaration
-#var = pickle.load(open('var_data.pickle', 'rb'))
 
+#Declaration of "var" variable to read data from pickle file.
+var = pickle.load(open('var_data.pickle', 'rb'))
+
+#Path of the pickle file that contains variable data.
 file = pathlib.Path('var_data.pickle')
+
+#Current date
+current_date = datetime.today().strftime('%Y-%m-%d-%H:%M')
 
 #Entries
 entry = Entry(window, width="8")
