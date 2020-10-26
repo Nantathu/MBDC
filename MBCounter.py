@@ -26,7 +26,6 @@ def load_data():
 def button_clear():
     entry.delete(0, END)
     entry.insert(0, 0)
-    global variable
     variable = 0
 
 def button_log():
@@ -50,7 +49,7 @@ entry = Entry(window, width="8")
 entry.grid(row = 0, column = 3, sticky = W)
 
 #Declaration of "var" variable to read data from pickle file.
-if file.exists() == True:
+if file.exists():
     var = pickle.load(open('var_data.pickle', 'rb'))
 elif file.exists() == False:
     variable = 0
