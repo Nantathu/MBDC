@@ -42,7 +42,6 @@ window.configure(bg="black")
 window.geometry("254x129")
 window.resizable(False, False)
 
-
 #Declaration of "var" variable to read data from pickle file.
 var = pickle.load(open('var_data.pickle', 'rb'))
 
