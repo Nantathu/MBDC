@@ -64,9 +64,9 @@ else:
 
 #Buttons
 psycha = Label(window, text = "Qbi moment: ", bg = "black", fg = "white")
-psycha.grid(row = 0, column = 1, sticky = E)
-button_psy = Button (window, text = "QBI", bg = "black", fg = "white", activebackground = "white", activeforeground = "black", width = "10", command = lambda: button_click(1))
-button_psy.grid(row = 0, column = 0)
+psycha.grid(row = 0, column = 1, sticky = W)
+button_psy = Button (window, text = "QBI MOMENT", bg = "black", fg = "white", activebackground = "white", activeforeground = "black", width = "10", command = lambda: button_click(1))
+button_psy.grid(row = 0, column = 0, sticky = E)
 button_clear = Button (window, text = "CLEAR", bg = "black", fg = "white", activebackground = "white", activeforeground = "black", width = "35", command = button_clear)
 button_clear.grid(row = 1, column = 0, columnspan = 4, sticky = W)
 button_log = Button (window, text = "LOGS", bg = "black", fg = "white", activebackground = "white", activeforeground = "black", width = "35", command = button_log)
